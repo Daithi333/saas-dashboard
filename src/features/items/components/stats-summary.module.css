@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.grid {
+  @apply grid grid-cols-2 gap-4;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    @apply grid-cols-4;
+  }
+}
+
+.card {
+  @apply rounded-lg border p-4;
+}
+
+.label {
+  @apply text-sm text-gray-500;
+}
+
+.value {
+  @apply text-2xl font-semibold;
+}

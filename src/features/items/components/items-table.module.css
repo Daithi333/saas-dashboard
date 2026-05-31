@@ -1,0 +1,45 @@
+@reference "tailwindcss";
+
+.empty {
+  @apply rounded-lg border p-8 text-center text-gray-500;
+}
+
+.wrapper {
+  @apply overflow-x-auto rounded-lg border;
+}
+
+.table {
+  @apply w-full text-left text-sm;
+}
+
+.header {
+  @apply border-b bg-gray-50 text-xs uppercase text-gray-500;
+}
+
+.headerCell {
+  @apply px-4 py-3;
+}
+
+.body {
+  @apply divide-y;
+}
+
+.row:hover {
+  @apply bg-gray-50;
+}
+
+.cell {
+  @apply px-4 py-3;
+}
+
+.titleLink {
+  @apply font-medium text-gray-900;
+}
+
+.titleLink:hover {
+  @apply underline;
+}
+
+.timestamp {
+  @apply px-4 py-3 text-gray-500;
+}

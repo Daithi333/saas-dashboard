@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.container {
+  @apply mx-auto w-full px-6 py-10;
+  max-width: 64rem;
+}
+
+.header {
+  @apply mb-8 flex items-center justify-between;
+}
+
+.title {
+  @apply text-2xl font-semibold text-gray-900;
+}
+
+.newItemLink {
+  @apply rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white;
+}
+
+.newItemLink:hover {
+  @apply bg-gray-700;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
