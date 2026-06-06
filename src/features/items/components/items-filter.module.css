@@ -1,0 +1,25 @@
+@reference "tailwindcss";
+
+.wrapper {
+  @apply flex flex-wrap items-center gap-3;
+}
+
+.select {
+  @apply rounded-md border px-3 py-1.5 text-sm text-gray-700;
+}
+
+.select:focus {
+  @apply outline-none ring-2 ring-gray-900;
+}
+
+.activeFilter {
+  @apply text-xs text-gray-500;
+}
+
+.clearButton {
+  @apply text-xs text-gray-500 underline;
+}
+
+.clearButton:hover {
+  @apply text-gray-700;
+}

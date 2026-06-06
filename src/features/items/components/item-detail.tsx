@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Item } from "../models/items";
 import { StatusBadge } from "./status-badge";
+import { DeleteItemButton } from "./delete-item-button";
 import styles from "./item-detail.module.css";
 
 interface ItemDetailProps {
@@ -16,7 +17,16 @@ export function ItemDetail({ item }: ItemDetailProps) {
 
       <div className={styles.header}>
         <h1 className={styles.title}>{item.title}</h1>
-        <StatusBadge status={item.status} />
+        <div className="flex items-center gap-3">
+          <StatusBadge status={item.status} />
+          <Link
+            href={`/items/${item.id}/edit`}
+            className="rounded-md border px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          >
+            Edit
+          </Link>
+          <DeleteItemButton id={item.id} />
+        </div>
       </div>
 
       <div className={styles.meta}>

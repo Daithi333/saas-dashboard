@@ -1,7 +1,11 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render } from "@testing-library/react";
 import { ItemDetail } from "./item-detail";
 import type { Item } from "../models/items";
+
+vi.mock("../actions/item-actions", () => ({
+  deleteItem: vi.fn(),
+}));
 
 const mockItem: Item = {
   id: "test-123",
@@ -38,5 +42,14 @@ describe("ItemDetail", () => {
     const { getByRole } = render(<ItemDetail item={mockItem} />);
     const link = getByRole("link", { name: /back to dashboard/i });
     expect(link).toHaveAttribute("href", "/");
+  });
+
+  it("should render edit and delete actions", () => {
+    const { getByRole, getByText } = render(<ItemDetail item={mockItem} />);
+    expect(getByRole("link", { name: "Edit" })).toHaveAttribute(
+      "href",
+      "/items/test-123/edit"
+    );
+    expect(getByText("Delete")).toBeInTheDocument();
   });
 });

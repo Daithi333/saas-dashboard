@@ -1,0 +1,71 @@
+@reference "tailwindcss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.input {
+  @apply rounded-md border px-3 py-2 text-sm text-gray-900;
+}
+
+.input:focus {
+  @apply outline-none ring-2 ring-gray-900;
+}
+
+.textarea {
+  @apply rounded-md border px-3 py-2 text-sm text-gray-900;
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.textarea:focus {
+  @apply outline-none ring-2 ring-gray-900;
+}
+
+.select {
+  @apply rounded-md border px-3 py-2 text-sm text-gray-900;
+}
+
+.select:focus {
+  @apply outline-none ring-2 ring-gray-900;
+}
+
+.error {
+  @apply text-xs text-red-600;
+}
+
+.actions {
+  @apply flex gap-3 pt-2;
+}
+
+.submitButton {
+  @apply rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white;
+}
+
+.submitButton:hover {
+  @apply bg-gray-700;
+}
+
+.submitButton:disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+.cancelLink {
+  @apply rounded-md border px-4 py-2 text-sm font-medium text-gray-700;
+}
+
+.cancelLink:hover {
+  @apply bg-gray-50;
+}

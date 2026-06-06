@@ -18,6 +18,10 @@ export interface ItemStats {
   done: number;
 }
 
+export interface ActionState {
+  errors?: Record<string, string>;
+}
+
 export function toItem(record: PrismaItem): Item {
   return {
     id: record.id,

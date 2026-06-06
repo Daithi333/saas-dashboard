@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getItem } from "@/features/items/services/items-service";
+import { getItem } from "@/features/items/data/items-data";
 import { ItemDetail } from "@/features/items/components/item-detail";
 import { NotFoundError } from "@/lib/errors";
 
